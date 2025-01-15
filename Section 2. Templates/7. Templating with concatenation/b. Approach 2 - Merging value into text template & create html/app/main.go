@@ -10,7 +10,7 @@ import (
 
 func main() {
 	name := "John Doe"
-	str := fmt.Sprintf(`
+	str := fmt.Sprintf("%s", `
 
 	<!DOCTYPE html>
 	<html lang="en">
@@ -19,7 +19,7 @@ func main() {
 		<title>Hello World!</title>
 	</head>
 	<body>
-		<h1>Hello ` + name + `</h1>
+		<h1>Hello `+name+`</h1>
 	</body>
 	</html>
 	`)
