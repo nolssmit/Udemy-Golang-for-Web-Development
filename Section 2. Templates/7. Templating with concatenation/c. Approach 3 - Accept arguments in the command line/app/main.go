@@ -10,10 +10,10 @@ import (
 
 func main() {
 	name := os.Args[1]
-	fmt.Println(os.Args[0])
-	fmt.Println(os.Args[1])
+	fmt.Println(os.Args[0]) // program you executed
+	fmt.Println(os.Args[1]) // additional data
+	str := fmt.Sprintf("%s", `
 
-	str := fmt.Sprintf(`
 	<!DOCTYPE html>
 	<html lang="en">
 	<head>
@@ -21,7 +21,7 @@ func main() {
 		<title>Hello World!</title>
 	</head>
 	<body>
-		<h1>Hello ` + name + `</h1>
+		<h1>Hello `+name+`</h1>
 	</body>
 	</html>
 	`)
@@ -34,3 +34,4 @@ func main() {
 
 	io.Copy(nf, strings.NewReader(str))
 }
+// Test with: go run main.go "Nols Smit"  > index.html 	
