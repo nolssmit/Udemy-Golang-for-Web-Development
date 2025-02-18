@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chatset="UTF-8">
+    <title>My Peeps</title>
+</head>
+<body>
+    {{range .Persons}}
+    {{uc .Name}}
+    {{end}}
+
+    {{range .Persons}}
+    {{ff .Motto}}
+    {{end}}
+</body>
+</html>
